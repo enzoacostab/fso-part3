@@ -1,0 +1,16 @@
+name: Url health check
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check URL health
+        uses: jtalk/url-health-check-action@v3
+        with:
+          url: https://fso-part3-b2t6.onrender.com/
+
